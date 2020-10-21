@@ -1,0 +1,21 @@
+Places.objects.create(destination="Paris France", travelstart="2020-10-17", travelend="2020-10-18", plan="described the place", uploader=User.objects.get(id=1))
+
+Places.objects.create(destination="Bohol PH", travelstart="2020-10-17", travelend="2020-10-18", plan="described the place", uploader=User.objects.get(id=1))
+
+Places.objects.create(destination="Singapore", travelstart="2020-10-17", travelend="2020-10-18", plan="described the place", uploader=User.objects.get(id=1))
+
+Places.objects.create(destination="Sydney Australia", travelstart="2020-10-17", travelend="2020-10-18", plan="described the place", uploader=User.objects.get(id=1))
+
+Places.objects.create(destination="Alexandria Rome", travelstart="2020-10-17", travelend="2020-10-18", plan="described the place", uploader=User.objects.get(id=1))
+
+
+Places.objects.create(destination="Zelona Gora Poland", travelstart="2020-10-17", travelend="2020-10-18", plan="described the place", uploader=User.objects.get(id=2))
+
+
+Places.objects.create(destination="Transylvania Romania", travelstart="2020-10-17", travelend="2020-10-18", plan="described the place", uploader=User.objects.get(id=2))
+
+Places.objects.create(destination="Transylvania Romania", travelstart="2020-10-17", travelend="2020-10-18", plan="described the place", uploader=User.objects.get(id=2))
+
+User.objects.create(name="", username="", password="")
+
+User.objects.create(name="sam winchester", username="sammyboi", password="boobies")

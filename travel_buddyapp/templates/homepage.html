@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color:lightgray;
+        }
+        tr:nth-child(odd) {
+            background-color:gray;
+        }
+
+        
+
+
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>SUCCESS! Welcome, {{loggedinUser.name}}</h1>
+    <a href="/logout"> Logout</a>
+
+    <table>
+        <tr> <caption>Your Trip Schedules</caption>
+            <th>Destination</th>
+            <th>Travel Start Date</th>
+            <th>Travel End Date</th>
+            <th>Plan</th>
+        </tr>
+        {% for places in user_places %}
+        <tr>
+            <td><a href="/place/{{places.id}}">{{places.destination}}</a></td>
+            <td>{{places.travelstart}}</td>
+            <td>{{places.travelend}}</td>
+            <td>{{places.plan}}</td>
+            
+        </tr>
+        {% endfor %}
+
+
+        <table>
+            <tr> <caption>Other User's Travel Plans</caption>
+                <th>Name</th>
+                <th>Destination</th>
+                <th>Travel Start  Date</th>
+                <th>Travel End Date</th>
+                <th>Do You Want To Join?</th>
+            </tr>
+            {% for Places in allplaces %}
+            <tr>
+                <td>{{Places.uploader.name}}</td>
+                <td>{{Places.destination}}</td>
+                <td>{{Places.travelstart}}</td>
+                <td>{{Places.travelend}}</td>
+                <td><a href="/join/{{Places.id}}">Join</a> </td>
+            </tr>
+            {% endfor %}
+
+
+
+    </table>
+    <a href="/add">Add Travel Plan</a>
+    
+</body>
+</html>
